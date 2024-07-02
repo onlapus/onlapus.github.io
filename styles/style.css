@@ -14,6 +14,8 @@ body {
     padding: 0;
 }
 
+
+
 .header {
     position: fixed;
     background-color: var(--teal);
@@ -45,6 +47,11 @@ body {
     text-align: center;
 }
 
+.nav-link:hover{
+	transition-duration: 0.5s;
+	filter: brightness(1.1);
+}
+
 .logo {
     margin-top: 15vh;
     height: 30vh;
@@ -72,7 +79,7 @@ body {
     margin-top: 2rem;
 }
 
-#not_available_box {
+#box {
     font-size: 1.5rem;
     font-family: "Comic Sans MS", "Comic Sans", cursive;
     background-color: var(--light-gray);
@@ -98,6 +105,50 @@ button#go_back:hover {
     background-color: var(--dark-teal);
 }
 
+.proj{
+	background-color: var(--light-gray);
+	border-radius: 15px;
+    box-shadow: 0 0 10px #000;
+    width: 50vw;
+    text-align: center;
+}
+#h1_proj{
+	position: absolute;
+	top: 12vh;
+}
+#CurrencyConverter{
+	position: relative;
+	top: 20vh;
+}
+#NedorozumBOT{
+	position: relative;
+	top: 25vh;
+}
+button#go_main {
+	position: fixed;
+	bottom: 2vh;
+	right: 2vh;
+	width: 5vw;
+	height: 5vw;
+	background-image: url('imgs/home.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: #ccc;
+	border: none;
+	border-radius: 15px;
+	cursor: pointer;
+}
+
+button#go_main:hover{
+	transition-duration: 0.5s;
+	filter: brightness(0.9);
+}
+
+
+
+
+
+
 @media (max-width: 768px) {
     .logo {
         height: 20vh;
@@ -113,3 +164,4 @@ button#go_back:hover {
         align-items: center;
     }
 }
+
