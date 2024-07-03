@@ -155,6 +155,17 @@ button:hover {
     top: 1vh
 }
 
+.article_img{
+    border-radius: 15px;
+    transition-duration: 0.3s;
+}
+.article_img:hover{
+    transform: scale(1.01);
+    transition-duration: 0.3s;
+}
+
+
+
 @media (max-width: 768px) {
     .header {
         padding: 1rem;
