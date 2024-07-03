@@ -163,7 +163,10 @@ button:hover {
     transform: scale(1.01);
     transition-duration: 0.3s;
 }
-
+.h1-article{
+    position: relative;
+    left: 40vw;
+}
 
 
 @media (max-width: 768px) {
@@ -191,5 +194,8 @@ button:hover {
     .article_topic p{
             top: 0vh;
         font-size: 250%;
+    }
+    .h1-article{
+        left: 15vw;
     }
 }
