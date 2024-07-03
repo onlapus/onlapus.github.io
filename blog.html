@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>blog</title>
-	<link rel="stylesheet" type="text/css" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-	<header class="header">
+    <header class="header">
         <nav>
             <ul class="nav-list">
                 <li><a href="./blog.html" class="nav-link">Blog</a></li>
@@ -16,22 +16,22 @@
             </ul>
         </nav>
         <button id="go_main" onclick="location.href='./index.html'">
-			<p>home</p>
-		</button>
+            <p>home</p>
+        </button>
     </header>
-
     <main class="content">
-    	<h1 id="h1_articles_page">Articles</h1>
-    	<h2 id="h2_articles_page">topics</h2>
+        <h1 id="h1_articles_page">Articles</h1>
+        <h2 id="h2_articles_page">Topics</h2>
+        <section id="choose_topic">
+            <button class="article_topic" onclick="location.href='./articles/minecraft/list.html'">
+                <img class="minecraft" src="imgs/minecraft.png" alt="Minecraft">
+            </button>
 
-    	<setion id="choose_topic">
-    		<button class="article_topic" onclick="location.href='./articles/minecraft/list.html'">
-    			<img class="minecraft" src="imgs/minecraft.png" alt="minecraft">
-    		</button>	
-    	</setion>
-    	
+            <button class="article_topic" onclick="location.href='./articles/other/list.html'">
+                <p>OTHER</p>
+            </button>
+
+        </section>
     </main>
-
-
 </body>
 </html>

@@ -14,8 +14,6 @@ body {
     padding: 0;
 }
 
-
-
 .header {
     position: fixed;
     background-color: var(--teal);
@@ -26,6 +24,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
 .nav-list {
@@ -47,9 +48,17 @@ body {
     text-align: center;
 }
 
-.nav-link:hover{
-	transition-duration: 0.5s;
-	filter: brightness(1.1);
+#go_main {
+    background-color: var(--light-gray);
+    color: var(--dark-teal);
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
 }
 
 .logo {
@@ -64,12 +73,11 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 2rem;
-    justify-content: center;
+    margin-top: 10vh;
 }
 
-#text_zone {
+#text_zone, #box {
     font-size: 1.5rem;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
     background-color: var(--light-gray);
     padding: 2rem;
     border-radius: 25px;
@@ -80,19 +88,47 @@ body {
     margin-top: 2rem;
 }
 
-#box {
-    font-size: 1.5rem;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
-    background-color: var(--light-gray);
-    padding: 4rem;
-    border-radius: 25px;
-    box-shadow: 0 0 10px #000;
-    text-align: center;
-    margin: 15vh auto;
-    max-width: 800px;
+#choose_topic {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
 }
 
-button#go_back {
+.article_topic {
+    text-align: center;
+    width: 40vw;
+    height: 20vh;
+    background: var(--light-gray);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.article_topic img {
+    width: 400px;
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.article_topic img:hover {
+    transform: scale(1.05);
+}
+
+.article_topic p{
+    transition: transform 0.3s;
+    position: relative;
+    color: black;
+    font-size: 500%;
+    top: -5vh;
+}
+.article_topic p:hover{
+    transform: scale(1.05);
+}
+
+button {
     padding: 0.5rem 1rem;
     background-color: var(--teal);
     color: var(--white);
@@ -102,84 +138,47 @@ button#go_back {
     margin-top: 1rem;
 }
 
-button#go_back:hover {
+button:hover {
+    transition-duration: 0.5s;
     background-color: var(--dark-teal);
 }
-
 .proj{
-	background-color: var(--light-gray);
-	border-radius: 15px;
-    box-shadow: 0 0 10px #000;
-    width: 50vw;
-    text-align: center;
+    position: relative;
+    background-color: var(--light-gray);
+    border-width: 0.5vh;
+    border-color: black;
+    border-radius: 15px;
 }
-#h1_proj{
-	position: absolute;
-	top: 12vh;
-}
-#CurrencyConverter{
-	position: relative;
-	top: 20vh;
-}
+
 #NedorozumBOT{
-	position: relative;
-	top: 25vh;
+    position: relative;
+    top: 1vh
 }
-button#go_main {
-	position: fixed;
-	bottom: 2vh;
-	right: 2vh;
-	width: 5vw;
-	height: 5vw;
-	background-image: url('imgs/home.png');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-color: #ccc;
-	border: none;
-	border-radius: 15px;
-	cursor: pointer;
-}
-
-button#go_main:hover{
-	transition-duration: 0.5s;
-	filter: brightness(0.9);
-}
-img.minecraft{
-    height: 30vh;
-    width: 50vw;
-}
-
-#choose_topic{
-    position: absolute;
-    top: 30vh;
-}
-
-#h1_articles_page{
-    position: absolute;
-    left: 45vw;
-    top: 12vh;
-}
-button.article_topic{
-    position: reletive;
-
-    left: 22.5vw;
-}
-
-h2#h2_articles_page{
-    position: absolute;
-    top: 22vh;
-    left: 47vw;
-}
-
 
 @media (max-width: 768px) {
-    .logo {
-        height: 20vh;
+    .header {
+        padding: 1rem;
+        height: auto;
     }
 
-    #text_zone, #not_available_box {
-        font-size: 1.2rem;
+    .nav-list {
+        gap: 0.5rem;
+    }
+
+    .content {
         padding: 1rem;
     }
-}
 
+    #text_zone, #box {
+        font-size: 1.2rem;
+        padding: 1.5rem;
+    }
+
+    .article_topic img {
+        width: 150px;
+    }
+    .article_topic p{
+            top: 0vh;
+        font-size: 250%;
+    }
+}
