@@ -155,7 +155,10 @@ button:hover {
     position: relative;
     top: 1vh
 }
-
+#OnlaReminder{
+    position: relative;
+    top: 1vh
+}
 
 .article_img{
     border-radius: 15px;
